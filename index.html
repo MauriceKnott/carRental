@@ -5,8 +5,404 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/21883e0955.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+    
 </head>
 <body>
+    <div class="d-flex justify-content-center" >
+        <a href="#" id="detailLink">Turo is open for business in Australia! Tap to explore cars.</a>
+    </div>
+    <nav class="navbar navbar-expand-lg position-relative" id="navBar">
+        <div class="container">
+            <div class="logo">
+          <a class="navbar-brand position-absolute start-0 px-3 logo" href="#"> <i class="fa-solid fa-car-on fa-lg"></i> Renters+</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+          <div class="collapse navbar-collapse position-absolute acc-items" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link create-acc" href="#">Become a host</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle acc-icons" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               
+                    <i class="fa-solid fa-bars fa-lg py-2 mx-2"></i>
+                    <i class="fa-regular fa-user fa-lg"></i>
+               
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Log in</a></li>
+                  <li><a class="dropdown-item" href="#">Sign up</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-key"></i> Become a premium member</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gift"></i> Gift cards</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Contact support</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-car-burst"></i> Insureance & coverage</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row p-3" id="mainDiv">
+        <img src="https://resources.turo.com/f/81934/1500x400/9f96e1079f/hp_earth-day_1500x400.jpg" alt="" class="truck-img">
+        <section class="search-sec">
+            
+            <div class="container n-nav">
+                <form class="form-inline">
+                
+                        <div class="form-control search-slt mb-3 mr-sm-3 mb-sm-0"  id="exampleFormControlSelect1">
+                            <label for="txtSearchTerm" class="label">Where</label>
+                            <input id="txtSearchTerm" name="q" class="search-page-search" placeholder="What are you looking for?" value="">
+                          </div>
+          
+                  
+                        <div class="input-group date mb-2 mr-sm-2 mb-sm-0" id="datepicker">
+                            <label for="start" class="label">From</label>
+                            <input type="date" id="start" name="trip-start"
+                            value="2018-07-22"
+                            min="2018-01-01" max="2018-12-31">
+                        </div>
+                            <select aria-label="Start time" id="searchFormRangeDateTimePicker-startTime" class="input-group time-picker" placeholder="10:00am">
+                                <option value="" disabled selected>10:00am</option>
+                                <option value="0">Midnight</option><option value="30">12:30 AM</option>
+                                <option value="60">1:00 AM</option><option value="90">1:30 AM</option>
+                                <option value="120">2:00 AM</option><option value="150">2:30 AM</option>
+                                <option value="180">3:00 AM</option><option value="210">3:30 AM</option>
+                                <option value="240">4:00 AM</option><option value="270">4:30 AM</option>
+                                <option value="300">5:00 AM</option><option value="330">5:30 AM</option>
+                                <option value="360">6:00 AM</option><option value="390">6:30 AM</option>
+                                <option value="420">7:00 AM</option><option value="450">7:30 AM</option>
+                                <option value="480">8:00 AM</option><option value="510">8:30 AM</option>
+                                <option value="540">9:00 AM</option><option value="570">9:30 AM</option>
+                                <option value="600">10:00 AM</option><option value="630">10:30 AM</option>
+                                <option value="660">11:00 AM</option><option value="690">11:30 AM</option>
+                                <option value="720">Noon</option><option value="750">12:30 PM</option>
+                                <option value="780">1:00 PM</option><option value="810">1:30 PM</option>
+                                <option value="840">2:00 PM</option><option value="870">2:30 PM</option>
+                                <option value="900">3:00 PM</option><option value="930">3:30 PM</option>
+                                <option value="960">4:00 PM</option><option value="990">4:30 PM</option>
+                                <option value="1020">5:00 PM</option><option value="1050">5:30 PM</option>
+                                <option value="1080">6:00 PM</option><option value="1110">6:30 PM</option>
+                                <option value="1140">7:00 PM</option><option value="1170">7:30 PM</option>
+                                <option value="1200">8:00 PM</option><option value="1230">8:30 PM</option>
+                                <option value="1260">9:00 PM</option><option value="1290">9:30 PM</option>
+                                <option value="1320">10:00 PM</option><option value="1350">10:30 PM</option>
+                                <option value="1380">11:00 PM</option><option value="1410">11:30 PM</option>
+                            </select>
+                        
+                        <div class="input-group date mb-0 mr-sm-2 mb-sm-0" id="datepicker">
+                            <label for="start" class="label">Until</label>
+                            <input type="date" id="start" name="trip-start"
+                            value="2018-07-22"
+                            min="2018-01-01" max="2018-12-31">
+                        </div>
+                            <select aria-label="Start time" id="searchFormRangeDateTimePicker-startTime" class="input-group time-picker">
+                                <option value="" disabled selected>10:00am</option>
+                                <option value="0">Midnight</option><option value="30">12:30 AM</option>
+                                <option value="60">1:00 AM</option><option value="90">1:30 AM</option>
+                                <option value="120">2:00 AM</option><option value="150">2:30 AM</option>
+                                <option value="180">3:00 AM</option><option value="210">3:30 AM</option>
+                                <option value="240">4:00 AM</option><option value="270">4:30 AM</option>
+                                <option value="300">5:00 AM</option><option value="330">5:30 AM</option>
+                                <option value="360">6:00 AM</option><option value="390">6:30 AM</option>
+                                <option value="420">7:00 AM</option><option value="450">7:30 AM</option>
+                                <option value="480">8:00 AM</option><option value="510">8:30 AM</option>
+                                <option value="540">9:00 AM</option><option value="570">9:30 AM</option>
+                                <option value="600">10:00 AM</option><option value="630">10:30 AM</option>
+                                <option value="660">11:00 AM</option><option value="690">11:30 AM</option>
+                                <option value="720">Noon</option><option value="750">12:30 PM</option>
+                                <option value="780">1:00 PM</option><option value="810">1:30 PM</option>
+                                <option value="840">2:00 PM</option><option value="870">2:30 PM</option>
+                                <option value="900">3:00 PM</option><option value="930">3:30 PM</option>
+                                <option value="960">4:00 PM</option><option value="990">4:30 PM</option>
+                                <option value="1020">5:00 PM</option><option value="1050">5:30 PM</option>
+                                <option value="1080">6:00 PM</option><option value="1110">6:30 PM</option>
+                                <option value="1140">7:00 PM</option><option value="1170">7:30 PM</option>
+                                <option value="1200">8:00 PM</option><option value="1230">8:30 PM</option>
+                                <option value="1260">9:00 PM</option><option value="1290">9:30 PM</option>
+                                <option value="1320">10:00 PM</option><option value="1350">10:30 PM</option>
+                                <option value="1380">11:00 PM</option><option value="1410">11:30 PM</option>
+                            </select>
+                      
+                  
+                    <button type="submit" class="btn btn-s "><i class="fa-solid fa-magnifying-glass fa-xs"></i></button>
+                  </form>
+            </div>
+        </section>
+                
+           
     
+        <script type="text/javascript">
+            $(function() {
+                $('#datepicker').datepicker();
+            });
+        </script>            
+          <script type="text/javascript">
+            $(function() {
+                $('#droppicker').datepicker();
+            });
+        </script>   
+</div>
+
+<div class="container text-center ">
+    <h1 id="driveTitle">Find your drive</h1>
+    <h3 id="smallHeading">Explore the world's largest car sharing marketplace</h3>
+
+    <div class="containerSlide">
+        <h3 class="browse">Browse by make</h3>
+        <div class="row " id="">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner car-inner" role="listbox">
+                    <div class="carousel-item active c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/9bf274f19e/image_make_jeep-2x.jpg" class=" d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Jeep</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/7dcf9bff19/image_make_tesla-2x.jpg" class=" d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Tesla</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/ef857a4438/image_make_subaru-2x.jpg" class=" d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Subaru</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/7e7ce60797/image_make_porsche-2x.jpg" class=" d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Porsche</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/0c4f5f5186/image_make_bmw-2x.jpg" class=" d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">BMW</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/065308f2c4/image_make_mb-2x.jpg" class=" d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Mercedes-Benz</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/2809ca8702/image_make_toyota-2x.jpg" class="d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Toyota</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/994b145776/image_make_nissan-2x.jpg" class=" d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Nissan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/a470b4f290/image_make_lambo-2x.jpg" class="d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Lamborghini</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item c-item car-item">
+                        <div class="col-md-2 c-item">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="//resources.turo.com/f/81934/386x308/0431f873ac/image_make_ford-2x.jpg" class="d-block w-100 c-img">
+                                </div>
+                                <div class="card-img-overlay">Ford</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut prev" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut next" href="#recipeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div> 
+    </div>
+
+    <div class="card mb-3 carbon-card " style="max-width: 992px;">
+        <div class="row g-0">
+          <div class="col-md-7">
+            <div class="card-body carbon-body text-start">
+              <h3 class="card-title carbon-title text-start">Turo is Carbon Neutral Certified</h3>
+              <p class="card-text carbon-text text-start">Drive and share cars knowing your carbon footprint is balanced out by greenhouse-gas-reduction projects. Carbon-neutral travel on Turo is now verified with a carbon neutral certification!</p>
+            </div>
+            <a href="#" class="btn carbon-btn text-start" tabindex="-1" role="button" aria-disabled="true">Explore sustainability on Turo</a>
+          </div>
+          <div class="col-md-5">
+            <img src="https://resources.turo.com/f/81934/514x290/ea758347ab/2304_earth-day_hp-module.png" class="img-fluid rounded-start carbon-img" alt="...">
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+</div>
+<div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+  </div>
+  </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex   justify-content-around">
+        <div class="card  " style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+  </div><div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+  </div>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-wrapper container-sm d-flex  justify-content-around">
+        <div class="card " style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+  </div>
+          <div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/collection/190727/1600x900" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+    </div>
+  </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+      
+</div>
+
+
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
+
+<!-- <div class="row form-group col-6 col-md-4">
+    <label for="date" class="col-sm-1 col-form-label">Date</label>
+    <div class="col-sm-6">
+        <div class="input-group date" id="datepicker">
+            <input type="text" class="form-control">
+            <span class="input-group-append">
+                <span class="input-group-text bg-white d-block">
+                    <i class="fa fa-calendar"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+</div> -->
