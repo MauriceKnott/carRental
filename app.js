@@ -15,6 +15,23 @@ let items = document.querySelectorAll('#recipeCarousel .carousel-item')
       }
   })
   
+  let item = document.querySelectorAll('#recipetravel .carousel-item')
+
+  item.forEach((el) => {
+      const minPerSlide = 5
+      let next = el.nextElementSibling
+      for (var i=0; i<minPerSlide; i++) {
+          if (!next) {
+            interval: 0,
+      
+              next = items[0]
+            }
+          let cloneChild = next.cloneNode(true)
+          el.appendChild(cloneChild.children[0])
+          next = next.nextElementSibling
+      }
+  })
+  
 
 
 
